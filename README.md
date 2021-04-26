@@ -11,6 +11,7 @@ A command-line application for checking cryptocurrency prices. 🚀
 - [Debugging](#debugging)
 - [Testing](#testing)
 - [Linting & Prettifying](#linting--prettifying)
+- [Documentation](#documentation)
 - [VSCode Extensions](#vscode-extensions)
 
 ## Prerequisites
