@@ -23,6 +23,20 @@ To build and run this app locally you will need a few things:
 
 ## Getting Started
 
+```
+cryptfolio [command]
+
+Commands:
+  cryptfolio prices [coins]  get a list of currency prices against the US dollar
+
+Options:
+      --help     Show help                                             [boolean]
+      --version  Show version number                                   [boolean]
+  -v, --verbose  Run with verbose logging                              [boolean]
+```
+
+## Development
+
 **Install the application**
 
     git clone --depth=1 https://github.com/0xReplicant/cryptfolio.git
