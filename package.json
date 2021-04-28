@@ -1,6 +1,6 @@
 {
   "name": "@0xreplicant/cryptfolio",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A command-line application for checking cryptocurrency prices",
   "author": "0xReplicant <zeroxreplicant@icloud.com>",
   "repository": "https://github.com/0xReplicant/cryptfolio",
@@ -31,7 +31,7 @@
     "test:watch": "jest --watch"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "lint-staged": {
     "*.ts": [
