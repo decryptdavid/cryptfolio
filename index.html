@@ -69,6 +69,7 @@
 				<ul>
 					<li><a href="#prerequisites">Prerequisites</a></li>
 					<li><a href="#getting-started">Getting started</a></li>
+					<li><a href="#development">Development</a></li>
 					<li><a href="#debugging">Debugging</a></li>
 					<li><a href="#testing">Testing</a></li>
 					<li><a href="#linting--prettifying">Linting &amp; Prettifying</a></li>
@@ -86,6 +87,11 @@
 				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
 					<h2>Getting Started</h2>
 				</a>
+				<p>Add the following to your <code>.npmrc</code> and install globally.</p>
+				<pre><code><span style="color: #000000">@0</span><span style="color: #001080">xReplicant</span><span style="color: #000000">:</span><span style="color: #001080">registry</span><span style="color: #000000">=</span><span style="color: #001080">https</span><span style="color: #000000">:</span><span style="color: #008000">//npm.pkg.github.com</span>
+<span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> --</span><span style="color: #001080">global</span><span style="color: #000000"> @0</span><span style="color: #001080">xReplicant</span><span style="color: #000000">/</span><span style="color: #001080">cryptfolio</span>
+</code></pre>
+				<p>You will now have the <code>cryptfolio</code> command in your terminal.</p>
 				<pre><code><span style="color: #001080">cryptfolio</span><span style="color: #000000"> [</span><span style="color: #001080">command</span><span style="color: #000000">]</span>
 
 <span style="color: #000000">Commands:</span>
@@ -129,24 +135,16 @@
 							<td>Builds the TypeScript declarations.</td>
 						</tr>
 						<tr>
-							<td><code>build:node</code></td>
-							<td>Builds the application into the ./dist folder.</td>
-						</tr>
-						<tr>
-							<td><code>build:node:watch</code></td>
-							<td>Builds the application and watches for changes.</td>
-						</tr>
-						<tr>
-							<td><code>build:node:dev</code></td>
-							<td>Builds a non minified version of the application for debugging,</td>
-						</tr>
-						<tr>
 							<td><code>clean</code></td>
 							<td>Removes all generated files and builds and re-installs the applications modules.</td>
 						</tr>
 						<tr>
 							<td><code>cli</code></td>
 							<td>Runs the CLI app with ts-node for development.</td>
+						</tr>
+						<tr>
+							<td><code>cli:built</code></td>
+							<td>Runs the CLI app with node against the built version.</td>
 						</tr>
 						<tr>
 							<td><code>docs</code></td>
