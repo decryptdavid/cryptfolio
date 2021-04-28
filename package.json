@@ -1,6 +1,6 @@
 {
   "name": "@0xreplicant/cryptfolio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A command-line application for checking cryptocurrency prices",
   "author": "0xReplicant <zeroxreplicant@icloud.com>",
   "repository": "https://github.com/0xReplicant/cryptfolio",
@@ -17,13 +17,11 @@
     "cryptfolio": "./dist/cli.js"
   },
   "scripts": {
-    "build": "yarn clean && yarn build:ts && yarn build:node",
+    "build": "yarn clean && yarn build:ts",
     "build:ts": "tsc -p tsconfig.json",
-    "build:node": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/cli.js",
-    "build:node:dev": "esbuild src/cli.ts --bundle --sourcemap=external --outfile=dist/cli.js",
-    "build:node:watch": "esbuild src/cli.ts --bundle --watch --sourcemap=external --outfile=dist/cli.js",
     "clean": "rimraf coverage dist docs",
     "cli": "ts-node src/cli.ts",
+    "cli:built": "node dist/cli.js",
     "docs": "typedoc --entryPoints src/main.ts",
     "format": "eslint src/ --ext .ts . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx && prettier \"**/*.ts\" --check --ignore-path .gitignore",
@@ -31,6 +29,9 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "lint-staged": {
     "*.ts": [

@@ -8,6 +8,7 @@ A command-line application for checking cryptocurrency prices. 🚀
 
 - [Prerequisites](#prerequisites)
 - [Getting started](#getting-started)
+- [Development](#development)
 - [Debugging](#debugging)
 - [Testing](#testing)
 - [Linting & Prettifying](#linting--prettifying)
@@ -22,6 +23,13 @@ To build and run this app locally you will need a few things:
 - Install: [Yarn](https://yarnpkg.com) with `npm install --global yarn`
 
 ## Getting Started
+
+Add the following to your `.npmrc` and install globally.
+
+    @0xReplicant:registry=https://npm.pkg.github.com
+    npm install --global @0xReplicant/cryptfolio
+
+You will now have the `cryptfolio` command in your terminal.
 
 ```
 cryptfolio [command]
@@ -58,11 +66,9 @@ Below is a list of all the scripts this template has available:
 | ----------------- | -------------------------------------------------------------------------------- |
 | `build`           | Cleans thn workspace and builds the application into the ./dist folder.          |
 | `build:ts`        | Builds the TypeScript declarations.                                              |
-| `build:node`      | Builds the application into the ./dist folder.                                   |
-| `build:node:watch`| Builds the application and watches for changes.                                  |
-| `build:node:dev`  | Builds a non minified version of the application for debugging,                  |
 | `clean`           | Removes all generated files and builds and re-installs the applications modules. |
 | `cli`             | Runs the CLI app with ts-node for development.                                   |
+| `cli:built`       | Runs the CLI app with node against the built version.                            |
 | `docs`            | Creates the typedocs documentation for the application.                          |
 | `lint`            | Runs a combination of TypeScript type checking, ESLint and Prettier.             |
 | `format`          | Runs the above lint task but tries to fix / write any simple fixes               |
