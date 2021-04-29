@@ -26,6 +26,7 @@
     "format": "eslint src/ --ext .ts . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "prepare": "husky install",
+    "prepublish": "yarn build",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"

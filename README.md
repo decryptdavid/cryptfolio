@@ -31,16 +31,60 @@ Add the following to your `.npmrc` and install globally.
 
 You will now have the `cryptfolio` command in your terminal.
 
+### Prices
 ```
-cryptfolio [command]
+$ cryptfolio prices BTC,ETH,RUNE
 
-Commands:
-  cryptfolio prices [coins]  get a list of currency prices against the US dollar
+┌────────────┬─────────────────────┐
+│ Crypto     │ USD                 │
+├────────────┼─────────────────────┤
+│ BTC        │ $57,961.75          │
+├────────────┼─────────────────────┤
+│ ETH        │ $2,861.24           │
+├────────────┼─────────────────────┤
+│ RUNE       │ $15.46              │
+└────────────┴─────────────────────┘
 
-Options:
-      --help     Show help                                             [boolean]
-      --version  Show version number                                   [boolean]
-  -v, --verbose  Run with verbose logging                              [boolean]
+$ cryptfolio prices BTC,ETH,RUNE --convert USD,GBP,BTC
+
+┌────────────┬─────────────────────┬─────────────────────┬─────────────────────┐
+│ Crypto     │ USD                 │ GBP                 │ BTC                 │
+├────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
+│ BTC        │ $57,935.81          │ £42,086.34          │ 1                   │
+├────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
+│ ETH        │ $2,860.01           │ £2,077.77           │ BTC 0.05            │
+├────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
+│ RUNE       │ $15.45              │ £11.22              │ BTC 0.00            │
+└────────────┴─────────────────────┴─────────────────────┴─────────────────────┘
+```
+
+### Settings
+
+You can additionally set some default coins and converts to convert against in a `.cryptofolio` in your home directory:
+
+```json
+{
+  "coins": "BTC,RUNE,LUNA,ALPHA",
+  "convert": "USD,GBP"
+}
+```
+
+Then when converting you can just pass the `prices` command without any arguments:
+
+```
+$ cryptfolio prices
+
+┌────────────┬─────────────────────┬─────────────────────┐
+│ Crypto     │ USD                 │ GBP                 │
+├────────────┼─────────────────────┼─────────────────────┤
+│ BTC        │ $57,926.69          │ £42,071.07          │
+├────────────┼─────────────────────┼─────────────────────┤
+│ RUNE       │ $15.42              │ £11.19              │
+├────────────┼─────────────────────┼─────────────────────┤
+│ LUNA       │ $16.77              │ £12.20              │
+├────────────┼─────────────────────┼─────────────────────┤
+│ ALPHA      │ $2.09               │ £1.52               │
+└────────────┴─────────────────────┴─────────────────────┘
 ```
 
 ## Development

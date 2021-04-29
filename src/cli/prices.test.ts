@@ -4,14 +4,14 @@ import { prices } from './prices';
 import { getPrices } from '../main';
 jest.mock('../main', () => ({
   getPrices: jest.fn(() => [
-    { base: 'BTC', price: '56000.00' },
-    { base: 'RUNE', price: '15.00' },
+    { base: 'BTC', prices: [{ convert: 'USD', value: '56000.00' }] },
+    { base: 'RUNE', prices: [{ convert: 'USD', value: '15.00' }] },
   ]),
 }));
-test('returns a multiple currencies', async () => {
+test('created Table object', async () => {
   expect.assertions(2);
 
-  expect(await prices(['BTC', 'RUNE'])).toMatchInlineSnapshot(`
+  expect(await prices(['BTC', 'RUNE'], ['USD'])).toMatchInlineSnapshot(`
     Table {
       "0": Array [
         "BTC",

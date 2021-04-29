@@ -1,42 +1,46 @@
 import fetch from 'node-fetch';
 import { toCurrency } from './utils/format';
+import { CryptonatorResponse, Currency, Price } from './types';
 
-enum Conversion {
-  USD = 'USD',
-  EUR = 'EUR',
-  GBP = 'GBP',
-}
-
-type Currency = {
-  base: string;
-  price: string;
-};
-
-type CryptonatorResponse = {
-  ticker: {
-    base: string;
-    target: string;
-    price: string;
-  };
-  timestamp: number;
-  success: boolean;
-  error: string;
-};
-
-async function getCurrencyConversion(currency: string): Promise<Currency> {
+async function fetcher(currency: string, convert: string): Promise<Price> {
+  if (currency === convert) {
+    return {
+      convert,
+      value: '1',
+    };
+  }
   const response = await fetch(
-    `https://api.cryptonator.com/api/ticker/${currency}-${Conversion.USD}`
+    `https://api.cryptonator.com/api/ticker/${currency}-${convert}`
   );
   const data: CryptonatorResponse = await response.json();
 
   return {
-    base: data.ticker.base,
-    price: toCurrency(data.ticker.price),
+    convert,
+    value: toCurrency(data.ticker.price, convert),
   };
 }
 
-export async function getPrices(currencies: string[]): Promise<Currency[]> {
-  const arr = currencies.map(getCurrencyConversion);
+async function getCurrencyConversion(
+  currency: string,
+  convert: string[]
+): Promise<Currency> {
+  const prices = await Promise.all(
+    convert.map(async conversion => await fetcher(currency, conversion))
+  );
+
+  return {
+    base: currency,
+    prices,
+  };
+}
+
+export async function getPrices(
+  currencies: string[],
+  convert: string[]
+): Promise<Currency[]> {
+  const arr = currencies.map(currency =>
+    getCurrencyConversion(currency, convert)
+  );
 
   return await Promise.all(arr);
 }
