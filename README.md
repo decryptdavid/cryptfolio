@@ -4,6 +4,13 @@
 
 A command-line application for checking cryptocurrency prices. 🚀
 
+### To do
+
+- [ ] Add `portfolio` command to check No. coins against current prices
+- [ ] Add localization support
+- [ ] Add support to manage the `.cryptofolio` file through the CLI
+- [ ] Better error handling
+
 ## Table of contents:
 
 - [Prerequisites](#prerequisites)
