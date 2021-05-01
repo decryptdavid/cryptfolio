@@ -6,9 +6,10 @@ A command-line application for checking cryptocurrency prices. 🚀
 
 ### To do
 
-- [ ] Add `portfolio` command to check No. coins against current prices
+- [ ] Add `portfolio` command to check a number coins against current prices
 - [ ] Add localization support
 - [ ] Add support to manage the `.cryptofolio` file through the CLI
+- [ ] Add `convert` command to check a coin against another coin `convert 1 BTC RUNE`
 - [ ] Better error handling
 
 ## Table of contents:
