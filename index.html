@@ -92,15 +92,56 @@
 <span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> --</span><span style="color: #001080">global</span><span style="color: #000000"> @0</span><span style="color: #001080">xReplicant</span><span style="color: #000000">/</span><span style="color: #001080">cryptfolio</span>
 </code></pre>
 				<p>You will now have the <code>cryptfolio</code> command in your terminal.</p>
-				<pre><code><span style="color: #001080">cryptfolio</span><span style="color: #000000"> [</span><span style="color: #001080">command</span><span style="color: #000000">]</span>
+				<a href="#prices" id="prices" style="color: inherit; text-decoration: none;">
+					<h3>Prices</h3>
+				</a>
+				<pre><code><span style="color: #001080">$</span><span style="color: #000000"> </span><span style="color: #001080">cryptfolio</span><span style="color: #000000"> </span><span style="color: #001080">prices</span><span style="color: #000000"> </span><span style="color: #0070C1">BTC</span><span style="color: #000000">,</span><span style="color: #0070C1">ETH</span><span style="color: #000000">,</span><span style="color: #0070C1">RUNE</span>
 
-<span style="color: #000000">Commands:</span>
-<span style="color: #000000">  </span><span style="color: #001080">cryptfolio</span><span style="color: #000000"> </span><span style="color: #001080">prices</span><span style="color: #000000"> [</span><span style="color: #001080">coins</span><span style="color: #000000">]  </span><span style="color: #001080">get</span><span style="color: #000000"> </span><span style="color: #001080">a</span><span style="color: #000000"> </span><span style="color: #001080">list</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">currency</span><span style="color: #000000"> </span><span style="color: #001080">prices</span><span style="color: #000000"> </span><span style="color: #001080">against</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #0070C1">US</span><span style="color: #000000"> </span><span style="color: #001080">dollar</span>
+<span style="color: #000000">┌────────────┬─────────────────────┐</span>
+<span style="color: #000000">│ </span><span style="color: #001080">Crypto</span><span style="color: #000000">     │ </span><span style="color: #0070C1">USD</span><span style="color: #000000">                 │</span>
+<span style="color: #000000">├────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">BTC</span><span style="color: #000000">        │ </span><span style="color: #001080">$57</span><span style="color: #000000">,</span><span style="color: #098658">961.75</span><span style="color: #000000">          │</span>
+<span style="color: #000000">├────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">ETH</span><span style="color: #000000">        │ </span><span style="color: #001080">$2</span><span style="color: #000000">,</span><span style="color: #098658">861.24</span><span style="color: #000000">           │</span>
+<span style="color: #000000">├────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">RUNE</span><span style="color: #000000">       │ </span><span style="color: #001080">$15</span><span style="color: #000000">.</span><span style="color: #098658">46</span><span style="color: #000000">              │</span>
+<span style="color: #000000">└────────────┴─────────────────────┘</span>
 
-<span style="color: #000000">Options:</span>
-<span style="color: #000000">      --</span><span style="color: #001080">help</span><span style="color: #000000">     </span><span style="color: #001080">Show</span><span style="color: #000000"> </span><span style="color: #001080">help</span><span style="color: #000000">                                             [</span><span style="color: #001080">boolean</span><span style="color: #000000">]</span>
-<span style="color: #000000">      --</span><span style="color: #001080">version</span><span style="color: #000000">  </span><span style="color: #001080">Show</span><span style="color: #000000"> </span><span style="color: #001080">version</span><span style="color: #000000"> </span><span style="color: #001080">number</span><span style="color: #000000">                                   [</span><span style="color: #001080">boolean</span><span style="color: #000000">]</span>
-<span style="color: #000000">  -</span><span style="color: #001080">v</span><span style="color: #000000">, --</span><span style="color: #001080">verbose</span><span style="color: #000000">  </span><span style="color: #001080">Run</span><span style="color: #000000"> </span><span style="color: #AF00DB">with</span><span style="color: #000000"> </span><span style="color: #001080">verbose</span><span style="color: #000000"> </span><span style="color: #001080">logging</span><span style="color: #000000">                              [</span><span style="color: #001080">boolean</span><span style="color: #000000">]</span>
+<span style="color: #001080">$</span><span style="color: #000000"> </span><span style="color: #001080">cryptfolio</span><span style="color: #000000"> </span><span style="color: #001080">prices</span><span style="color: #000000"> </span><span style="color: #0070C1">BTC</span><span style="color: #000000">,</span><span style="color: #0070C1">ETH</span><span style="color: #000000">,</span><span style="color: #0070C1">RUNE</span><span style="color: #000000"> --</span><span style="color: #001080">convert</span><span style="color: #000000"> </span><span style="color: #0070C1">USD</span><span style="color: #000000">,</span><span style="color: #0070C1">GBP</span><span style="color: #000000">,</span><span style="color: #0070C1">BTC</span>
+
+<span style="color: #000000">┌────────────┬─────────────────────┬─────────────────────┬─────────────────────┐</span>
+<span style="color: #000000">│ </span><span style="color: #001080">Crypto</span><span style="color: #000000">     │ </span><span style="color: #0070C1">USD</span><span style="color: #000000">                 │ </span><span style="color: #0070C1">GBP</span><span style="color: #000000">                 │ </span><span style="color: #0070C1">BTC</span><span style="color: #000000">                 │</span>
+<span style="color: #000000">├────────────┼─────────────────────┼─────────────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">BTC</span><span style="color: #000000">        │ </span><span style="color: #001080">$57</span><span style="color: #000000">,</span><span style="color: #098658">935.81</span><span style="color: #000000">          │ £</span><span style="color: #098658">42</span><span style="color: #000000">,</span><span style="color: #098658">086.34</span><span style="color: #000000">          │ </span><span style="color: #098658">1</span><span style="color: #000000">                   │</span>
+<span style="color: #000000">├────────────┼─────────────────────┼─────────────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">ETH</span><span style="color: #000000">        │ </span><span style="color: #001080">$2</span><span style="color: #000000">,</span><span style="color: #098658">860.01</span><span style="color: #000000">           │ £</span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">077</span><span style="color: #000000">.</span><span style="color: #098658">77</span><span style="color: #000000">           │ </span><span style="color: #0070C1">BTC</span><span style="color: #000000"> </span><span style="color: #098658">0.05</span><span style="color: #000000">            │</span>
+<span style="color: #000000">├────────────┼─────────────────────┼─────────────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">RUNE</span><span style="color: #000000">       │ </span><span style="color: #001080">$15</span><span style="color: #000000">.</span><span style="color: #098658">45</span><span style="color: #000000">              │ £</span><span style="color: #098658">11.22</span><span style="color: #000000">              │ </span><span style="color: #0070C1">BTC</span><span style="color: #000000"> </span><span style="color: #098658">0.00</span><span style="color: #000000">            │</span>
+<span style="color: #000000">└────────────┴─────────────────────┴─────────────────────┴─────────────────────┘</span>
+</code></pre>
+				<a href="#settings" id="settings" style="color: inherit; text-decoration: none;">
+					<h3>Settings</h3>
+				</a>
+				<p>You can additionally set some default coins and converts to convert against in a <code>.cryptofolio</code> in your home directory:</p>
+				<pre><code class="language-json"><span style="color: #000000">{</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;coins&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;BTC,RUNE,LUNA,ALPHA&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;convert&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;USD,GBP&quot;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<p>Then when converting you can just pass the <code>prices</code> command without any arguments:</p>
+				<pre><code><span style="color: #001080">$</span><span style="color: #000000"> </span><span style="color: #001080">cryptfolio</span><span style="color: #000000"> </span><span style="color: #001080">prices</span>
+
+<span style="color: #000000">┌────────────┬─────────────────────┬─────────────────────┐</span>
+<span style="color: #000000">│ </span><span style="color: #001080">Crypto</span><span style="color: #000000">     │ </span><span style="color: #0070C1">USD</span><span style="color: #000000">                 │ </span><span style="color: #0070C1">GBP</span><span style="color: #000000">                 │</span>
+<span style="color: #000000">├────────────┼─────────────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">BTC</span><span style="color: #000000">        │ </span><span style="color: #001080">$57</span><span style="color: #000000">,</span><span style="color: #098658">926.69</span><span style="color: #000000">          │ £</span><span style="color: #098658">42</span><span style="color: #000000">,</span><span style="color: #098658">071</span><span style="color: #000000">.</span><span style="color: #098658">07</span><span style="color: #000000">          │</span>
+<span style="color: #000000">├────────────┼─────────────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">RUNE</span><span style="color: #000000">       │ </span><span style="color: #001080">$15</span><span style="color: #000000">.</span><span style="color: #098658">42</span><span style="color: #000000">              │ £</span><span style="color: #098658">11.19</span><span style="color: #000000">              │</span>
+<span style="color: #000000">├────────────┼─────────────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">LUNA</span><span style="color: #000000">       │ </span><span style="color: #001080">$16</span><span style="color: #000000">.</span><span style="color: #098658">77</span><span style="color: #000000">              │ £</span><span style="color: #098658">12.20</span><span style="color: #000000">              │</span>
+<span style="color: #000000">├────────────┼─────────────────────┼─────────────────────┤</span>
+<span style="color: #000000">│ </span><span style="color: #0070C1">ALPHA</span><span style="color: #000000">      │ </span><span style="color: #001080">$2</span><span style="color: #000000">.</span><span style="color: #098658">09</span><span style="color: #000000">               │ £</span><span style="color: #098658">1.52</span><span style="color: #000000">               │</span>
+<span style="color: #000000">└────────────┴─────────────────────┴─────────────────────┘</span>
 </code></pre>
 				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
 					<h2>Development</h2>
