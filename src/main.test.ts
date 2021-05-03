@@ -26,7 +26,10 @@ test('returns a single currency', async () => {
   fetch.mockImplementation(() => response);
 
   expect(await getPrices(['BTC'], ['USD'])).toStrictEqual([
-    { base: 'BTC', prices: [{ convert: 'USD', value: '$1,234.56' }] },
+    {
+      base: 'BTC',
+      prices: [{ convert: 'USD', value: '$1,234.56', raw: '1234.56' }],
+    },
   ]);
 });
 
@@ -52,8 +55,14 @@ test('returns a multiple currencies', async () => {
   fetch.mockImplementation(() => response);
 
   expect(await getPrices(['BTC', 'RUNE'], ['USD'])).toStrictEqual([
-    { base: 'BTC', prices: [{ convert: 'USD', value: '$1,234.56' }] },
-    { base: 'RUNE', prices: [{ convert: 'USD', value: '$1,234.56' }] },
+    {
+      base: 'BTC',
+      prices: [{ convert: 'USD', value: '$1,234.56', raw: '1234.56' }],
+    },
+    {
+      base: 'RUNE',
+      prices: [{ convert: 'USD', value: '$1,234.56', raw: '1234.56' }],
+    },
   ]);
 });
 
@@ -82,15 +91,15 @@ test('returns a multiple currencies against multiple converts', async () => {
     {
       base: 'BTC',
       prices: [
-        { convert: 'USD', value: '$1,234.56' },
-        { convert: 'GBP', value: '£1,234.56' },
+        { convert: 'USD', value: '$1,234.56', raw: '1234.56' },
+        { convert: 'GBP', value: '£1,234.56', raw: '1234.56' },
       ],
     },
     {
       base: 'RUNE',
       prices: [
-        { convert: 'USD', value: '$1,234.56' },
-        { convert: 'GBP', value: '£1,234.56' },
+        { convert: 'USD', value: '$1,234.56', raw: '1234.56' },
+        { convert: 'GBP', value: '£1,234.56', raw: '1234.56' },
       ],
     },
   ]);

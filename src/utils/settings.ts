@@ -1,11 +1,13 @@
 import { homedir } from 'os';
 import { promises as fs } from 'fs';
+import { Bag } from '../types';
 
 const DOT_SETTINGS = `${homedir()}/.cryptfolio`;
 
 type Settings = {
   coins: string;
   convert: string;
+  portfolio?: Bag[];
 };
 
 export async function loadSettings(): Promise<Settings> {

@@ -29,9 +29,9 @@ describe('#argumentsToArray', () => {
 describe('#toTableHeader', () => {
   test('converts a list of currency prices to an array of the convert', () => {
     const prices = [
-      { convert: 'USD', value: '1' },
-      { convert: 'GBP', value: '1' },
-      { convert: 'EUR', value: '1' },
+      { convert: 'USD', value: '$1', raw: '1' },
+      { convert: 'GBP', value: '$1', raw: '1' },
+      { convert: 'EUR', value: '$1', raw: '1' },
     ];
     expect(toTableHeader(prices)).toStrictEqual(['USD', 'GBP', 'EUR']);
   });
