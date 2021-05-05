@@ -59,18 +59,16 @@ export async function getPortfolio(
     .map(bag => bag.coin)
     .map(currency => getCurrencyConversion(currency, convert))
     .map(async currency => {
-      const curr = await currency;
+      const { base, prices } = await currency;
       return {
-        base: curr.base,
-        values: curr.prices.map(price => ({
+        base: base,
+        values: prices.map(price => ({
           convert: price.convert,
           value: toCurrency(
-            Number(price.raw) * Number(getCoinValue(curr.base, bags)),
+            Number(price.raw) * Number(getCoinValue(base, bags)),
             price.convert
           ),
-          raw: String(
-            Number(price.raw) * Number(getCoinValue(curr.base, bags))
-          ),
+          raw: String(Number(price.raw) * Number(getCoinValue(base, bags))),
         })),
       };
     });
